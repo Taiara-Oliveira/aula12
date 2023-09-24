@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="javascript.java"></script>
+    <title>:: AULA 12 ♥ ::</title>
+</head>
+
+<body>
+    
+    <header>
+        <div class="logo fonte">Calculadora Online</div>
+        <nav class="fonte">
+            <ul>
+                <li>Menu 01</li>
+                <li>Menu 02</li>
+                <li>Menu 03</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       
+        <h1 class="fonte_h1">Calculadora Online</h1>
+        <div id="div01" class="content">
+            <input type="number" name="txt01" id="txt01" class="txt">
+            <input type="number" name="txt02" id="txt02" class="txt">
+            <input type="button" value="+" id="btnSomar" class="txt">
+            <input type="button" value="-" id="btnSubtração" class="txt">
+            <input type="button" value="*" id="btnMultiplicação" class="txt">
+            <input type="button" value="/" id="btnDivisão" class="txt">
+            <INPUT type="reset"  value="Limpar" id="btnLimpar" class="txt">
+             
+
+            
+           
+             
+            
+            <div id="resultado">
+                Resultado
+            </div>
+        </div>
+    </main>
+
+
+    <footer>Elas na Tech 2023 ♥</footer>
+
+
+    <script>
+        var btnSomar = document.getElementById('btnSomar');
+        btnSomar.addEventListener('click', somar);
+       
+
+        function somar() {
+            var c1 = document.getElementById('txt01');
+            var c2 = document.getElementById('txt02');
+            var result = document.getElementById('resultado');
+
+            
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+
+            var resultado = num1 + num2;
+            result.innerText = "A soma é: " + resultado;
+
+        }
+        
+        var btnSubtração = document.getElementById('btnSubtração');
+        btnSubtração.addEventListener('click', Subtração);
+
+        function Subtração() {
+            var c1 = document.getElementById('txt01');
+            var c2 = document.getElementById('txt02');
+            var result = document.getElementById('resultado');
+
+            
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+
+            var resultado = num1 - num2;
+            result.innerText = "A Subtração: " + resultado;
+        }
+
+        var btnMultiplicação = document.getElementById('btnMultiplicação');
+        btnMultiplicação.addEventListener('click', Multiplicação);
+
+        function Multiplicação() {
+            var c1 = document.getElementById('txt01');
+            var c2 = document.getElementById('txt02');
+            var result = document.getElementById('resultado');
+
+            
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+
+            var resultado = num1 * num2;
+            result.innerText = "A Multiplicação é: " + resultado;
+        }
+
+           
+        var btnDivisão = document.getElementById('btnDivisão');
+        btnDivisão.addEventListener('click', Divisão);
+
+        function Divisão() {
+            var c1 = document.getElementById('txt01');
+            var c2 = document.getElementById('txt02');
+            var result = document.getElementById('resultado');
+
+            
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+
+            var resultado = num1 / num2;
+            result.innerText = "A Divisão é: " + resultado;
+        }
+   
+            
+        var btnLimpar = document.getElementById('btnLimpar');
+        btnLimpar.addEventListener('click', Limpar);
+        
+        function Limpar(){
+            var c1 = document.getElementById('txt01');
+            var c2 = document.getElementById('txt02');
+            var result = document.getElementById('resultado');
+
+            
+            var num1 = parseFloat(c1.value);
+            var num2 = parseFloat(c2.value);
+        }
+
+       
+
+
+    </script>
+
+</body>
+
+</html>
